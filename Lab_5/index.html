@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>HTML Forms</title>
+</head>
+<body>
+  <h1>Volunteer Form</h1>
+    <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="post">
+      <fieldset>
+        <legend>My Info</legend>
+        <div>
+            <!-- FIRST NAME -->
+            <label for="fname">first name:</label>
+            <input type="text" id="fname" name="first_name_field" placeholder="John" required><br>
+        </div>        
+        <div>
+            <!-- LAST NAME -->
+            <label for="lname">last name:</label>
+            <input type="text" id="lname" name="last_name_field" placeholder="Doe" required><br>
+        </div>
+        <div>
+            <!-- PHONE -->
+            <label for="phone">phone:</label>
+            <input type="text" id="phone" name="phone_field" placeholder="888-888-8888"><br>
+        </div>
+        <div>
+            <!-- GENDER -->
+            <label for="gender">Gender:</label>
+        </div>
+        <div>
+        <!-- Radio buttons. Provide the same group name to force selection of only one --> 
+            <input type="radio" id="male" name="gender_field" value="gender">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender_field" value="gender">
+            <label for="female">Female</label><br>
+        </div>
+        <div>
+        <!-- Provide the same group name to force selection of only one -->
+        <!-- Dropdown menu use a select instead of an input type-->
+        <!-- Dropdown menu use a select instead of a input type--> 
+            <label for="age">Age:</label><br>
+            <select id="age" name="age_field">
+                <option value="Over 18">Over 18</option>
+                <option value="Under 18">Under 18</option>
+            </select>
+        </div>
+        <br>
+      </fieldset>
+    </form>
+</body>
+</html>
+
+
