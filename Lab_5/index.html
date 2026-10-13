@@ -1,54 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <title>HTML Forms</title>
+  <meta charset="UTF-8" />
+  <title>HTML Forms</title>
 </head>
+
 <body>
+  <!-- FORM HEADER -->
   <h1>Volunteer Form</h1>
-    <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="post">
-      <fieldset>
-        <legend>My Info</legend>
-        <div>
-            <!-- FIRST NAME -->
-            <label for="fname">first name:</label>
-            <input type="text" id="fname" name="first_name_field" placeholder="John" required><br>
-        </div>        
-        <div>
-            <!-- LAST NAME -->
-            <label for="lname">last name:</label>
-            <input type="text" id="lname" name="last_name_field" placeholder="Doe" required><br>
-        </div>
-        <div>
-            <!-- PHONE -->
-            <label for="phone">phone:</label>
-            <input type="text" id="phone" name="phone_field" placeholder="888-888-8888"><br>
-        </div>
-        <div>
-            <!-- GENDER -->
-            <label for="gender">Gender:</label>
-        </div>
-        <div>
-        <!-- Radio buttons. Provide the same group name to force selection of only one --> 
-            <input type="radio" id="male" name="gender_field" value="gender">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender_field" value="gender">
-            <label for="female">Female</label><br>
-        </div>
-        <div>
-        <!-- Provide the same group name to force selection of only one -->
-        <!-- Dropdown menu use a select instead of an input type-->
-        <!-- Dropdown menu use a select instead of a input type--> 
-            <label for="age">Age:</label><br>
-            <select id="age" name="age_field">
-                <option value="Over 18">Over 18</option>
-                <option value="Under 18">Under 18</option>
-            </select>
-        </div>
-        <br>
-      </fieldset>
-    </form>
+  <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="post">
+
+    <!-- FIRST FIELDSET (MY INFO) -->
+    <fieldset>
+      <legend>My Info</legend>
+      <div>
+        <!-- FIRST NAME -->
+        <label for="fname">first name:</label>
+        <input type="text" id="fname" name="first_name_field" placeholder="John" required>
+      </div>
+      <div>
+        <!-- LAST NAME -->
+        <label for="lname">last name:</label>
+        <input type="text" id="lname" name="last_name_field" placeholder="Doe" required>
+      </div>
+      <div>
+        <!-- PHONE FIELD -->
+        <label for="phone">phone:</label>
+        <input type="text" id="phone" name="phone_field" placeholder="888-888-8888" pattern="[0-9]{10}" title="Numbers and dashes only. Format: 888-888-8888">
+      </div>
+      <div>
+        <!-- EMAIL FIELD-->
+        <label for="email">email:</label>
+        <input type="email" id="email" name="email_field" placeholder="john.doe@gmail.com">
+      </div>
+      <div>
+        <!-- GENDER TEXT -->
+        <span>Gender:</span>
+      </div>
+      <div>
+        <!-- GENDER (RADIO BUTTONS) -->
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender_field" value="Male">
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender_field" value="Female">
+      </div>
+      <div>
+        <!-- AGE SELECTION (DROPDOWN) -->
+        <label for="age">Age:</label><br>
+        <select id="age" name="age_field">
+          <option value="Under 18">Under 18</option>
+          <option value="Over 18">Over 18</option>
+        </select>
+      </div>
+    </fieldset>
+
+    <!-- SECOND FIELDSET (MY AVAILABILITY) -->
+    <fieldset>
+      <legend>My Availability</legend>
+      <div>
+        <h2>Days Available:</h2>
+      </div>
+      <!-- DAYS CHECKBOXES -->
+      <div>
+        <label for="sunday">Sunday</label>
+        <input type="checkbox" id="sunday" name="available_field[]" value="Sunday"><br>
+        <label for="monday">Monday</label>
+        <input type="checkbox" id="monday" name="available_field[]" value="Monday"><br>
+        <label for="tuesday">Tuesday</label>
+        <input type="checkbox" id="tuesday" name="available_field[]" value="Tuesday"><br>
+        <label for="wednesday">Wednesday</label>
+        <input type="checkbox" id="wednesday" name="available_field[]" value="Wednesday"><br>
+        <label for="thursday">Thursday</label>
+        <input type="checkbox" id="thursday" name="available_field[]" value="Thursday"><br>
+        <label for="friday">Friday</label>
+        <input type="checkbox" id="friday" name="available_field[]" value="Friday"><br>
+        <label for="saturday">Saturday</label>
+        <input type="checkbox" id="saturday" name="available_field[]" value="Saturday"><br>
+      </div>
+
+      <div>
+        <!-- COMMENTS HEADER-->
+        <h3><label for="comments">Comments</label></h3>
+      </div>
+
+      <div>
+        <!-- COMMENTS TEXTAREA -->
+        <textarea id="comments" name="comments_field"></textarea>
+      </div>
+    </fieldset>
+
+    <!-- HIDDEN FIELD -->
+    <input type="hidden" name="hidden_field" value="Janel Greo Abad">
+
+    <div>
+      <!-- SUBMIT BUTTON -->
+      <input type="submit" value="Submit Query">
+    </div>
+  </form>
 </body>
+
 </html>
-
-
