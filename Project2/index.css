@@ -1,0 +1,64 @@
+/* Navigation: identical on all pages, not counted as a style */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.75em 0;
+  text-align: center;
+  background-color: rgb(0, 31, 91);
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+nav a {
+  color: rgb(251, 216, 127);
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Style 1: page background color */
+body {
+  background-color: lightgray;
+}
+
+/* Style 2: fluid layout, resize content with window */
+main {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 1.5em;
+  background-color: rgba(231, 231, 231, 0.847);
+}
+
+/* Style 3: font, text color, and line spacing */
+main {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(40, 40, 40);
+  line-height: 1.6;
+}
+
+/* Style 4: headings */
+h1, h2 {
+  color: rgb(0, 31, 91);
+  text-align: center;
+}
+
+/* Style 5: Center image, add rounded border */
+main img {
+  display: block;
+  margin: 1em auto;
+  border: 0.25em solid rgb(0, 31, 91);
+  border-radius: 1em;
+}
+
+/* Style 6: centered audio player */
+main audio {
+  display: block;
+  margin: 1em auto;
+}
