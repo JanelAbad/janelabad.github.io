@@ -24,3 +24,11 @@ function initMap() {
     infoWindow.open(map, marker);
   });
 }
+
+const questionsBtn = document.getElementById("questions-btn");
+
+if (questionsBtn) {
+  questionsBtn.addEventListener("click", function () {
+    alert("If you have questions, contact me at:\n\njabad@fake.email");
+    });
+}
