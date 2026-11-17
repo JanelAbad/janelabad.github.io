@@ -12,7 +12,11 @@ function initMap() {
   const marker = new google.maps.Marker({
     position: iit,
     map: map,
-    title: "Illinois Institute of Technology"
+    title: "Illinois Institute of Technology",
+    icon: {
+      url: "media/IIT.png",
+      scaledSize: new google.maps.Size(50, 50)
+    }
   });
 
   // Feature 3: info window that opens when the marker is clicked
@@ -23,6 +27,35 @@ function initMap() {
   marker.addListener("click", function () {
     infoWindow.open(map, marker);
   });
+
+  // Feature 4: Naval Station Great Lakes marker with custom Navy icon
+  const greatLakes = { lat: 42.3086, lng: -87.8484 };
+
+  const navyMarker = new google.maps.Marker({
+    position: greatLakes,
+    map: map,
+    title: "Naval Station Great Lakes",
+    icon: {
+      url: "media/Navy.png",
+      scaledSize: new google.maps.Size(50, 50)
+    }
+  });
+
+  // Navy marker popup
+  const navyInfo = new google.maps.InfoWindow({
+    content: "<h3>Navy Boot Camp</h3><p>Great Lakes, IL</p>"
+  });
+
+  navyMarker.addListener("click", function () {
+    navyInfo.open(map, navyMarker);
+  });
+
+  // Feature 5: auto-zoom so both markers fit on the map
+  const bounds = new google.maps.LatLngBounds();
+  bounds.extend(iit);
+  bounds.extend(greatLakes);
+  map.fitBounds(bounds);
+
 }
 
 const questionsBtn = document.getElementById("questions-btn");
